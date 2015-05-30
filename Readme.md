@@ -1,6 +1,6 @@
 # Data binding samples
 Samples for google new dataBinding Library
-https://developer.android.com/tools/data-binding/guide.html
+###https://developer.android.com/tools/data-binding/guide.html
 
 ### Simple Data Binding 
 ```xml
