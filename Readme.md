@@ -1,9 +1,8 @@
 # Data binding samples
 Samples for google new dataBinding Library
->https://developer.android.com/tools/data-binding/guide.html
+https://developer.android.com/tools/data-binding/guide.html
 
-* ###Simple Data Binding 
->In xml
+### Simple Data Binding 
 ```xml
 <layout>
     <data>
@@ -23,18 +22,21 @@ Samples for google new dataBinding Library
 </LinearLayout>
 </layout>
 ```
->In Activity
+
+In Activity
 
 ```java
  ActivityDataBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_data);
         User user = new User("Saleeh", 22, "123456789", "https://developer.android.com/assets/images/android_logo.png");
         binding.setUser(user);
 ```
->That's it to get all done
+That's it to get all done
+
 ###Here is how it look
 ![Screen 1] (https://raw.githubusercontent.com/saleeh93/data-binding-samples/master/art/simple.png)
-* ###ListView Binding 
->In list item view just as above 
+###ListView Binding 
+
+In list item view just as above 
 
 ```
 <layout>
@@ -53,7 +55,8 @@ Samples for google new dataBinding Library
     </RelativeLayout>
 </layout>
 ```
->In adapter getView
+
+In adapter getView
 
 ```
     @Override
