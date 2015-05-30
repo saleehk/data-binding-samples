@@ -23,7 +23,8 @@ Samples for google new dataBinding Library
 </LinearLayout>
 </layout>
 ```
->In Activity 
+>In Activity
+
 ```java
  ActivityDataBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_data);
         User user = new User("Saleeh", 22, "123456789", "https://developer.android.com/assets/images/android_logo.png");
@@ -34,6 +35,7 @@ Samples for google new dataBinding Library
 ![Screen 1] (https://raw.githubusercontent.com/saleeh93/data-binding-samples/master/art/simple.png)
 * ###ListView Binding 
 >In list item view just as above 
+
 ```
 <layout>
     <data>
