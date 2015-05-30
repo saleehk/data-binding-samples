@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><!--suppress AndroidDomInspection -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+
+        <variable
+            name="repo"
+            type="com.saleeh.databinding.api.models.Repo" />
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20sp"
+            android:layout_toEndOf="@+id/imageView"
+            android:layout_toRightOf="@+id/imageView"
+            android:text="@{repo.fullName}"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="72dp"
+
+            android:layout_height="72dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            app:imageUrl="@{repo.owner.avatarUrl}" />
+
+        <TextView
+            android:id="@+id/user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/title"
+            android:layout_alignLeft="@+id/title"
+            android:layout_alignRight="@+id/title"
+            android:layout_alignStart="@+id/title"
+            android:layout_below="@+id/title"
+            android:text="@{repo.description}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+    </RelativeLayout>
+</layout>
