@@ -38,7 +38,7 @@ That's it to get all done
 
 In list item view just as above 
 
-```
+```xml
 <layout>
     <data>
     <variable
@@ -58,7 +58,7 @@ In list item view just as above
 
 In adapter getView
 
-```
+```java
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ListRepoItemBinding binding;
