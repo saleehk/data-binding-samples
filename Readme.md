@@ -1,5 +1,6 @@
 # Data binding samples
 Samples for google new dataBinding Library
+>https://developer.android.com/tools/data-binding/guide.html
 
 * ###Simple Data Binding 
 >In xml
@@ -33,8 +34,7 @@ Samples for google new dataBinding Library
 ![Screen 1] (https://raw.githubusercontent.com/saleeh93/data-binding-samples/master/art/simple.png)
 * ###ListView Binding 
 >In list item view just as above 
-```xml
-
+```
 <layout>
     <data>
     <variable
@@ -50,6 +50,24 @@ Samples for google new dataBinding Library
             android:text="@{repo.description}" />
     </RelativeLayout>
 </layout>
+```
+>In adapter getView
 
 ```
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        ListRepoItemBinding binding;
+        if (convertView == null)
+            binding = DataBindingUtil.inflate(mInflater, R.layout.list_repo_item, parent, false);
+        else
+            binding = DataBindingUtil.getBinding(convertView);
+        Repo item = getItem(position);
+        binding.setRepo(item);
+
+        convertView = binding.getRoot();
+        return convertView;
+    }
+    
+```
+![Screen 2] (https://raw.githubusercontent.com/saleeh93/data-binding-samples/master/art/list.png)
 
